@@ -1,4 +1,5 @@
-Hashes to name generator
+Hashes to name generator and parser
+===================================
 
 Uses three lists:
 
@@ -22,3 +23,22 @@ It takes a hash in base 16 as argument. With the current lists, it can
 represent up to 8 positions. 10 positions works fine with a few digits
 number. If the hash is small, it will produce an animal, then
 color+animal and finally color+animal from location before the full form.
+
+
+Use the option --parse to obtain back the hash, the following shell
+command should be an identity transformation:
+
+$ python namegen.py `python namegen.py 62623831ab` --parse
+62623831ab
+
+
+
+EXAMPLES
+
+(my GPG fingerprint)
+$ python namegen.py 4A27AF6A
+Mediumorchid-Shoebird-from-Arlay
+
+(the first digits of the MD5 hash for animals.list)
+$ python namegen.py c345a6a36972
+Lawngreen-Archeopteryx-#55840-from-Augne
