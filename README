@@ -1,0 +1,24 @@
+Hashes to name generator
+
+Uses three lists:
+
+* List of colors, distilled from doloreslabs color names v1 (see
+  http://blog.doloreslabs.com/?p=17). Used last word for each color,
+  cleaned mispellings by hand.
+
+* List of animals, distilled from WordNet 3.0 (wn animal -treen,
+  you'll need to patch your binary to see the whole output). Kept all
+  animals that were only one word. One animal per synset, first
+  one-word synonym picked.
+
+* List of locations, distilled from YAGO 2.0 (which in turn distilled
+  it from Wikipedia and other sources), postprocessed from hasArea.tsv
+  (dropped all locations that required non-printable characters).
+
+It produces verbalizations in the form 'color' 'animal' # 'left-over
+number' from 'location'.
+
+It takes a hash in base 16 as argument. With the current lists, it can
+represent up to 8 positions. 10 positions works fine with a few digits
+number. If the hash is small, it will produce an animal, then
+color+animal and finally color+animal from location before the full form.
