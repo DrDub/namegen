@@ -4,8 +4,9 @@ Hashes to name generator and parser
 Uses three lists:
 
 * List of colors, distilled from doloreslabs color names v1 (see
-  http://blog.doloreslabs.com/?p=17). Used last word for each color,
-  cleaned mispellings by hand.
+  http://blog.doloreslabs.com/?p=17, now at 
+  http://web.archive.org/web/20120828112952/http://blog.doloreslabs.com/?p=17). 
+  Used last word for each color, cleaned mispellings by hand.
 
 * List of animals, distilled from WordNet 3.0 (wn animal -treen,
   you'll need to patch your binary to see the whole output). Kept all
